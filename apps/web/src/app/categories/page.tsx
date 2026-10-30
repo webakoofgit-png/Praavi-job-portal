@@ -1,0 +1,6 @@
+import Link from "next/link";
+import { Bike, BriefcaseBusiness, Factory, HeartPulse, Store, Utensils } from "lucide-react";
+import { categories, demoJobs } from "@/lib/data";
+const icons={Store,HeartPulse,Bike,BriefcaseBusiness,Utensils,Factory};
+export const metadata={title:"Job categories"};
+export default function Categories(){return <main><section className="bg-canvas border-b"><div className="container-shell py-14"><p className="eyebrow">Browse work</p><h1 className="mt-3 text-4xl font-extrabold tracking-[-.04em]">Job categories</h1><p className="mt-4 max-w-2xl text-slate-600">Explore active categories. Counts below refer only to labeled development listings.</p></div></section><section className="container-shell grid gap-4 py-14 sm:grid-cols-2 lg:grid-cols-3">{categories.map(c=>{const Icon=icons[c.icon as keyof typeof icons];const count=demoJobs.filter(j=>j.category===c.name).length;return <Link key={c.slug} href={`/jobs?category=${c.slug}`} className="group panel p-6 transition hover:-translate-y-0.5 hover:border-brand-600"><Icon className="text-brand-600"/><h2 className="mt-5 text-lg font-extrabold">{c.name}</h2><p className="mt-2 text-sm text-slate-500">{count} demo {count===1?"listing":"listings"}</p><span className="mt-5 inline-block text-sm font-bold text-brand-700">Browse jobs →</span></Link>})}</section></main>}

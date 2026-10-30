@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+* { border-color: theme("colors.line"); }
+html { scroll-behavior: smooth; }
+body { @apply bg-white text-ink antialiased; }
+::selection { @apply bg-brand-100 text-brand-900; }
+a, button, input, select, textarea { @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2; }
+.container-shell { @apply mx-auto w-full max-w-[1180px] px-4 sm:px-6 lg:px-8; }
+.eyebrow { @apply text-xs font-extrabold uppercase tracking-[.16em] text-brand-700; }
+.display { @apply text-4xl font-extrabold leading-[1.08] tracking-[-.04em] sm:text-5xl lg:text-[64px]; }
+.section-title { @apply text-3xl font-extrabold tracking-[-.03em] sm:text-4xl; }
+.btn-primary { @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-brand-600 px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-700 active:translate-y-px; }
+.btn-secondary { @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border bg-white px-5 py-3 text-sm font-bold text-ink transition hover:border-brand-600 hover:text-brand-700; }
+.field { @apply h-12 w-full rounded-xl border bg-white px-4 text-sm placeholder:text-slate-400; }
+.panel { @apply rounded-2xl border bg-white shadow-[0_8px_30px_rgba(20,32,51,.05)]; }

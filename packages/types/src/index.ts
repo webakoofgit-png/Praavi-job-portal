@@ -1,0 +1,1 @@
+export type Role="CANDIDATE"|"EMPLOYER"|"ADMIN";export type JobStatus="DRAFT"|"PENDING"|"ACTIVE"|"PAUSED"|"REJECTED"|"CLOSED"|"EXPIRED";export type ApplicationStatus="APPLIED"|"UNDER_REVIEW"|"SHORTLISTED"|"INTERVIEW"|"OFFERED"|"HIRED"|"REJECTED"|"WITHDRAWN";export type ContactMethod="PHONE"|"WHATSAPP";

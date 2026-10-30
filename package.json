@@ -1,0 +1,23 @@
+{
+  "name": "praavi-job-portal",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @praavi/web",
+    "dev:web": "npm run dev -w @praavi/web",
+    "dev:api": "npm run start:dev -w @praavi/api",
+    "build": "npm run build -w @praavi/web && npm run build -w @praavi/api",
+    "typecheck": "npm run typecheck -ws --if-present"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "nodemailer": "^10.3.1"
+  }
+}

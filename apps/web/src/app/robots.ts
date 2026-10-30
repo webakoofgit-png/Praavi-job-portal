@@ -1,0 +1,1 @@
+import type {MetadataRoute} from "next";export default function robots():MetadataRoute.Robots{return{rules:[{userAgent:"*",allow:["/"],disallow:["/candidate/","/employer/","/admin/","/api/"]}],sitemap:"https://jobs.praavi.in/sitemap.xml"}}
